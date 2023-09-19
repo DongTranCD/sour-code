@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100hv;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+    font-family: "Poppins";
+}
+
+.card {
+    margin: 120px auto;
+    width: 320px;
+    height: 440px;
+    background: #272d40;
+    padding: 20px;
+    border-radius: 15px;
+    color: aliceblue;
+    position: relative;
+}
+
+.card__heart,
+.card_cart {
+    font-size: 25px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.card_cart {
+    left: unset;
+    right: 15px;
+
+}
+
+.card__img {
+    width: 280px;
+    transition: 0.5s;
+}
+
+.card__img img {
+    padding: 40px 50px;
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.card__title,
+.card__price {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.75s;
+}
+
+.card__size,
+.card__color {
+    display: flex;
+    padding: 5px 7px;
+    border-radius: 15px;
+    transition: 0.5s;
+
+}
+
+.card__size span {
+    padding: 2px 10px;
+    background-color: gray;
+    border-radius: 5px;
+    color: black;
+    margin: 0px 5px;
+}
+
+.card__color span {
+    padding: 2px 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin: 8px 5px;
+}
+
+.card__color .red {
+    background-color: red;
+}
+
+.card__color .White {
+    background-color: #f0f0f0;
+}
+
+.card__color .Black {
+    background-color: black;
+}
+
+.card__button button {
+    margin: auto;
+    font-weight: 50px;
+    background-color: blueviolet;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card:hover .card__img {
+    transform: translate(-90px) rotate(-20deg);
+}
+
+.card:hover .card__price,
+.card:hover .card__title {
+    transform: translate(-7px, -52px);
+}
+
+.card__size,
+.card__button,
+.card__color {
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.card__size {
+    margin-top: 150px;
+}
+
+.card:hover .card__color,
+.card:hover .card__size,
+.card:hover .card__button {
+    visibility: visible;
+    opacity: 100;
+}
+
+.card:hover .card__size {
+    margin-top: -30px;
+}

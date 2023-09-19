@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    overflow: hidden;
+    background: rgb(16, 96, 72);
+}
+
+.open-modal-btn
+{
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 25px;
+    left: 50%;
+    transform: translate(-50%,500%);
+    position: relative;
+   
+}
+.modal
+{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal_inear
+{
+    width: 400px;
+    position: relative; 
+    margin: auto;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: modalShow 6.7s linear;
+}
+
+.modal_header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #e26e70;
+    color: white;
+}
+
+.modal_body
+{
+    padding: 15px;
+}
+
+.modal_body h1
+{
+    color: #e26e70;
+}
+
+.modal_foot
+{
+    padding: 15px;
+    text-align: right;
+}
+
+.modal_foot button
+{
+    padding: 10px 30px; /* chiều dài rộng khung close */
+    background: #e26e70;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.hide
+{
+    display: none;
+}
+
+@keyframes modalShow
+{
+    form{
+            top: -200px;
+            opacity: 1;
+    }
+
+    to{
+            top: 0;
+            opacity: 0;
+    }
+}
